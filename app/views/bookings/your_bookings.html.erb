@@ -1,0 +1,46 @@
+<div class="row">
+  <div class="col-md-3">
+    <ul class="sidebar-list">
+      <li class="sidebar-item"><%= link_to "Your Spaces", spaces_path, class: "sidebar-link" %></li>
+      <li class="sidebar-item"><%= link_to "Your Bookings", your_bookings_path, class: "sidebar-link active" %></li>
+      <li class="sidebar-item"><%= link_to "Your Events", your_events_path, class: "sidebar-link" %></li>
+    </ul>
+  </div>
+  <div class="col-md-9">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Your Bookings
+      </div>
+      <div class="panel-body">
+        <% @space.each do |space| %>
+
+          <% space.bookings.each do |booking| %>
+            <% if booking.status %>
+              <div class="row">
+                <div class="col-md-2">
+                  <%= booking.start_date.strftime('%v') %>
+                </div>
+                <div class="col-md-6">
+                  <%= link_to space_path(booking.space) do %>
+                    <%= image_tag booking.space.photos[0].image.url(:thumb) %>
+                  <% end %>
+                </div>
+                <div class="col-md-2">
+                  <%= link_to user_path(booking.user) do %>
+                    <%= image_tag avatar_url(booking.user), class: "img-circle avatar-medium" %>
+                  <% end%>
+                </div>
+                <div class="col-md-2 right">
+                  <h4>HK$ <%= booking.total %></h4>
+                </div>
+              </div>
+              <hr>
+            <% end %>
+          <% end %>
+
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,45 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  space_type: MyString
+  accomodation_type: MyString
+  capacity: 1
+  listing_name: MyString
+  summary: MyText
+  address: MyString
+  is_air: false
+  is_heating: false
+  is_bar: false
+  is_bathroom: false
+  is_projector: false
+  is_sound_system: false
+  is_stage: false
+  is_stage: false
+  is_podium: false
+  is_wifi: false
+  is_catering: false
+  price: 1
+  active: false
+  user_id: 
+
+two:
+  space_type: MyString
+  accomodation_type: MyString
+  capacity: 1
+  listing_name: MyString
+  summary: MyText
+  address: MyString
+  is_air: false
+  is_heating: false
+  is_bar: false
+  is_bathroom: false
+  is_projector: false
+  is_sound_system: false
+  is_stage: false
+  is_stage: false
+  is_podium: false
+  is_wifi: false
+  is_catering: false
+  price: 1
+  active: false
+  user_id: 
